@@ -37,11 +37,7 @@ let instance = null;
 
 function modalShow(src) {
   instance = basicLightbox.create(
-    `
-    <div class="modal">
-        <img src="${src}" style="height:90vh; display:block"></img>
-    </div>
-`,
+    `<img src="${src}" style="height:90vh; display:block"></img>`,
     {
       onShow: instance => {
         addListener();
@@ -53,7 +49,6 @@ function modalShow(src) {
   );
   instance.show();
 }
-
 function addListener() {
   window.addEventListener('keydown', onEscClick);
 }
